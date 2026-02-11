@@ -20,7 +20,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <img 
-                src="/images/growth-nature.jpg" 
+                src={`${import.meta.env.BASE_URL}images/growth-nature.jpg`}
                 alt="Growth and healing" 
                 className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
               />

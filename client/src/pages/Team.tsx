@@ -22,7 +22,7 @@ export default function Team() {
             <div className="grid md:grid-cols-3">
               <div className="md:col-span-1 min-h-[300px] md:min-h-full relative bg-muted/10 flex items-center justify-center overflow-hidden">
                 <img 
-                  src="/images/liana-condello-resized.jpg" 
+                  src={`${import.meta.env.BASE_URL}images/liana-condello-resized.jpg`}
                   alt="Liana Joy Condello" 
                   className="w-full h-auto object-contain"
                 />

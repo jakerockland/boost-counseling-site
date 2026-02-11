@@ -16,7 +16,7 @@ export default function Home() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/images/hero-video.mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}images/hero-video.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]"></div>
@@ -55,7 +55,7 @@ export default function Home() {
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/30 rounded-full blur-2xl"></div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/30 rounded-full blur-2xl"></div>
               <img 
-                src="/images/growth-nature.jpg" 
+                src={`${import.meta.env.BASE_URL}images/growth-nature.jpg`}
                 alt="Growth and renewal" 
                 className="relative rounded-[2rem] shadow-xl w-full object-cover aspect-[4/3] organic-shape"
               />
@@ -178,7 +178,7 @@ export default function Home() {
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="/images/counseling-session.jpg" 
+                  src={`${import.meta.env.BASE_URL}images/counseling-session.jpg`}
                   alt="Comfortable counseling environment" 
                   className="w-full h-auto object-cover"
                 />

@@ -44,7 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container flex h-20 items-center justify-between">
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer">
-              <img src="/images/logo.png" alt="Boost Counseling Services" className="h-12 w-auto" />
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Boost Counseling Services" className="h-12 w-auto" />
               <div className="hidden lg:block">
                 <h1 className="font-serif text-xl font-bold text-primary leading-none">Boost Counseling Services</h1>
               </div>
@@ -117,7 +117,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="md:col-span-1">
               <Link href="/">
                 <div className="flex items-center gap-2 mb-4 cursor-pointer">
-                  <img src="/images/logo.png" alt="Boost Counseling Services" className="h-10 w-auto" />
+                  <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Boost Counseling Services" className="h-10 w-auto" />
                   <span className="font-serif text-lg font-bold text-primary">Boost Counseling Services</span>
                 </div>
               </Link>
