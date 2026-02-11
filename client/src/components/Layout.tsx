@@ -117,7 +117,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <footer className="bg-muted/30 border-t border-border">
         <div className="container py-12 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="md:col-span-1">
+            <div>
               <Link href="/">
                 <div className="flex items-center gap-2 mb-4 cursor-pointer">
                   <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Boost Counseling Services" className="h-10 w-auto" />
@@ -129,23 +129,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </p>
             </div>
 
-            <div>
-              <h3 className="font-serif font-semibold text-foreground mb-4">Services</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/services"><span className="hover:text-primary transition-colors cursor-pointer">Individual Counseling</span></Link></li>
-                <li><Link href="/services"><span className="hover:text-primary transition-colors cursor-pointer">Group Therapy</span></Link></li>
-                <li><Link href="/eating-disorder-iop"><span className="hover:text-primary transition-colors cursor-pointer">Eating Disorder IOP</span></Link></li>
-                <li><Link href="/services"><span className="hover:text-primary transition-colors cursor-pointer">Trauma Therapy</span></Link></li>
-                <li><Link href="/services"><span className="hover:text-primary transition-colors cursor-pointer">Telehealth</span></Link></li>
-              </ul>
-            </div>
-
-            <div>
+            <div className="md:col-span-2">
               <h3 className="font-serif font-semibold text-foreground mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/about"><span className="hover:text-primary transition-colors cursor-pointer">About Us</span></Link></li>
-                <li><Link href="/team"><span className="hover:text-primary transition-colors cursor-pointer">Our Providers</span></Link></li>
-                <li><Link href="/contact"><span className="hover:text-primary transition-colors cursor-pointer">Contact</span></Link></li>
+              <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted-foreground">
+                {navItems.map((item) => (
+                  <li key={item.path}>
+                    <Link href={item.path}>
+                      <span className="hover:text-primary transition-colors cursor-pointer">{item.name}</span>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
