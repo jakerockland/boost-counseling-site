@@ -11,7 +11,7 @@ export default function Contact() {
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <section className="bg-primary text-white py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url('/images/abstract-flow.jpg')", backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/abstract-flow.jpg')`, backgroundSize: 'cover' }}></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
@@ -91,21 +91,10 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="bg-white p-8 rounded-2xl shadow-xl border border-border/50">
               <h3 className="font-serif text-2xl font-bold mb-6">Send a Message</h3>
-              <form className="space-y-6" onSubmit={(e) => {
-                e.preventDefault();
-                const form = e.target as HTMLFormElement;
-                const firstName = (form.elements.namedItem('first-name') as HTMLInputElement).value;
-                const lastName = (form.elements.namedItem('last-name') as HTMLInputElement).value;
-                const email = (form.elements.namedItem('email') as HTMLInputElement).value;
-                const phone = (form.elements.namedItem('phone') as HTMLInputElement).value;
-                const service = (form.elements.namedItem('service') as HTMLSelectElement).value;
-                const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
-                
-                const subject = `New Inquiry from ${firstName} ${lastName} - ${service}`;
-                const body = `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\nService of Interest: ${service}\n\nMessage:\n${message}`;
-                
-                window.location.href = `mailto:contact@boosttalkaz.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-              }}>
+              <form className="space-y-6" action="https://formsubmit.co/contact@boosttalkaz.com" method="POST">
+                <input type="hidden" name="_subject" value="New inquiry from Boost Counseling website" />
+                <input type="hidden" name="_next" value={`${window.location.origin}${import.meta.env.BASE_URL}contact`} />
+                <input type="hidden" name="_captcha" value="true" />
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="first-name">First name</Label>
@@ -139,22 +128,9 @@ export default function Contact() {
                   <Label htmlFor="message">Message</Label>
                   <Textarea id="message" name="message" placeholder="How can we help you?" className="min-h-[120px]" required />
                 </div>
-                <div className="space-y-3">
-                  <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90">
-                    Send Message
-                  </Button>
-                  <div className="text-center">
-                    <a 
-                      href="mailto:contact@boosttalkaz.com" 
-                      className="text-xs text-muted-foreground hover:text-primary underline"
-                    >
-                      Click here if email app doesn't open automatically
-                    </a>
-                  </div>
-                </div>
-                <p className="text-xs text-muted-foreground text-center">
-                  *This form will open your default email client to send the message.
-                </p>
+                <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90">
+                  Send Message
+                </Button>
               </form>
             </div>
           </div>
