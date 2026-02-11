@@ -1,23 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { ArrowRight, Heart, Shield, Sun, Users } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
+  useDocumentTitle();
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
+          <video
+            autoPlay
+            loop
+            muted
             playsInline
+            preload="metadata"
+            poster={`${import.meta.env.BASE_URL}images/hero-water-stones.jpg`}
             className="w-full h-full object-cover"
           >
             <source src={`${import.meta.env.BASE_URL}images/hero-video.mp4`} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]"></div>
         </div>
@@ -54,9 +57,10 @@ export default function Home() {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/30 rounded-full blur-2xl"></div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/30 rounded-full blur-2xl"></div>
-              <img 
+              <img
                 src={`${import.meta.env.BASE_URL}images/growth-nature.jpg`}
-                alt="Growth and renewal" 
+                alt="Desert wildflowers representing growth and renewal through counseling"
+                loading="lazy"
                 className="relative rounded-[2rem] shadow-xl w-full object-cover aspect-[4/3] organic-shape"
               />
             </div>
@@ -143,7 +147,7 @@ export default function Home() {
       {/* Featured Program Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 z-0"></div>
-        <div className="absolute right-0 top-0 w-1/2 h-full bg-cover bg-center opacity-10 hidden lg:block" style={{ backgroundImage: "url('/images/abstract-flow.jpg')" }}></div>
+        <div className="absolute right-0 top-0 w-1/2 h-full bg-cover bg-center opacity-10 hidden lg:block" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/abstract-flow.jpg')` }}></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -177,9 +181,10 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                <img 
+                <img
                   src={`${import.meta.env.BASE_URL}images/counseling-session.jpg`}
-                  alt="Comfortable counseling environment" 
+                  alt="A comfortable, welcoming counseling environment"
+                  loading="lazy"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -193,7 +198,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-24 bg-primary text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('/images/abstract-flow.jpg')", backgroundSize: 'cover' }}></div>
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/abstract-flow.jpg')`, backgroundSize: 'cover' }}></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">Ready to make a positive change?</h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">

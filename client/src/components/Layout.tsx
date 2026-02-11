@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Menu, Phone, Mail, MapPin } from "lucide-react";
 import { useState } from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -21,20 +21,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-background font-sans">
+      {/* Skip to content */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-2 focus:left-2 focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-md">
+        Skip to main content
+      </a>
+
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground py-2 text-sm hidden md:block">
         <div className="container flex justify-between items-center">
           <div className="flex gap-6">
             <a href="tel:520-447-2433" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Phone className="h-4 w-4" /> (520) 447-2433
+              <Phone className="h-4 w-4" aria-hidden="true" /> (520) 447-2433
             </a>
             <a href="mailto:contact@boosttalkaz.com" className="flex items-center gap-2 hover:text-accent transition-colors">
-              <Mail className="h-4 w-4" /> contact@boosttalkaz.com
+              <Mail className="h-4 w-4" aria-hidden="true" /> contact@boosttalkaz.com
             </a>
-          </div>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-accent transition-colors"><Facebook className="h-4 w-4" /></a>
-            <a href="#" className="hover:text-accent transition-colors"><Instagram className="h-4 w-4" /></a>
           </div>
         </div>
       </div>
@@ -46,18 +47,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="flex items-center gap-3 cursor-pointer">
               <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Boost Counseling Services" className="h-12 w-auto" />
               <div className="hidden lg:block">
-                <h1 className="font-serif text-xl font-bold text-primary leading-none">Boost Counseling Services</h1>
+                <span className="font-serif text-xl font-bold text-primary leading-none">Boost Counseling Services</span>
               </div>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
-                <span className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
-                  isActive(item.path) ? "text-primary font-bold" : "text-muted-foreground"
-                }`}>
+                <span
+                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                    isActive(item.path) ? "text-primary font-bold" : "text-muted-foreground"
+                  }`}
+                  {...(isActive(item.path) ? { "aria-current": "page" as const } : {})}
+                >
                   {item.name}
                 </span>
               </Link>
@@ -72,17 +76,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {/* Mobile Nav */}
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" aria-label="Open navigation menu">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col gap-4 mt-8">
+              <nav className="flex flex-col gap-4 mt-8" aria-label="Mobile navigation">
                 {navItems.map((item) => (
                   <Link key={item.path} href={item.path}>
-                    <span 
-                      className={`text-lg font-medium py-2 border-b border-border/50 cursor-pointer ${
+                    <span
+                      className={`text-lg font-medium py-2 border-b border-border/50 cursor-pointer block ${
                         isActive(item.path) ? "text-primary" : "text-foreground"
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
@@ -93,10 +96,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 ))}
                 <div className="mt-4 flex flex-col gap-4">
                   <a href="tel:520-447-2433" className="flex items-center gap-2 text-muted-foreground">
-                    <Phone className="h-4 w-4" /> (520) 447-2433
+                    <Phone className="h-4 w-4" aria-hidden="true" /> (520) 447-2433
                   </a>
                   <a href="mailto:contact@boosttalkaz.com" className="flex items-center gap-2 text-muted-foreground">
-                    <Mail className="h-4 w-4" /> contact@boosttalkaz.com
+                    <Mail className="h-4 w-4" aria-hidden="true" /> contact@boosttalkaz.com
                   </a>
                 </div>
               </nav>
@@ -106,7 +109,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </header>
 
       {/* Page Content */}
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         {children}
       </main>
 
@@ -121,13 +124,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <span className="font-serif text-lg font-bold text-primary">Boost Counseling Services</span>
                 </div>
               </Link>
-              <p className="text-sm text-muted-foreground mb-4">
+              <p className="text-sm text-muted-foreground">
                 Compassionate, nonjudgmental treatment to help you live beyond just "getting by".
               </p>
-              <div className="flex gap-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Facebook className="h-5 w-5" /></a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Instagram className="h-5 w-5" /></a>
-              </div>
             </div>
 
             <div>
@@ -147,35 +146,32 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/about"><span className="hover:text-primary transition-colors cursor-pointer">About Us</span></Link></li>
                 <li><Link href="/team"><span className="hover:text-primary transition-colors cursor-pointer">Our Providers</span></Link></li>
                 <li><Link href="/contact"><span className="hover:text-primary transition-colors cursor-pointer">Contact</span></Link></li>
-                <li><Link href="/resources"><span className="hover:text-primary transition-colors cursor-pointer">Resources</span></Link></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-serif font-semibold text-foreground mb-4">Contact Us</h3>
-              <ul className="space-y-3 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <MapPin className="h-4 w-4 mt-1 shrink-0" />
-                  <span>2500 N Tucson Blvd, Suite 110<br />Tucson AZ 85716</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Phone className="h-4 w-4 shrink-0" />
-                  <a href="tel:520-447-2433" className="hover:text-primary transition-colors">(520) 447-2433</a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 shrink-0" />
-                  <a href="mailto:contact@boosttalkaz.com" className="hover:text-primary transition-colors">contact@boosttalkaz.com</a>
-                </li>
-              </ul>
+              <address className="not-italic">
+                <ul className="space-y-3 text-sm text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <MapPin className="h-4 w-4 mt-1 shrink-0" aria-hidden="true" />
+                    <span>2500 N Tucson Blvd, Suite 110<br />Tucson AZ 85716</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
+                    <a href="tel:520-447-2433" className="hover:text-primary transition-colors">(520) 447-2433</a>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
+                    <a href="mailto:contact@boosttalkaz.com" className="hover:text-primary transition-colors">contact@boosttalkaz.com</a>
+                  </li>
+                </ul>
+              </address>
             </div>
           </div>
-          
-          <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
+
+          <div className="border-t border-border mt-12 pt-8 text-center text-xs text-muted-foreground">
             <p>&copy; {new Date().getFullYear()} Boost Counseling Services, PLLC. All rights reserved.</p>
-            <div className="flex gap-6">
-              <Link href="/privacy"><span className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</span></Link>
-              <Link href="/terms"><span className="hover:text-primary transition-colors cursor-pointer">Terms of Service</span></Link>
-            </div>
           </div>
         </div>
       </footer>

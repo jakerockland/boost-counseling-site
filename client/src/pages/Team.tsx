@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { Link } from "wouter";
 
 export default function Team() {
+  useDocumentTitle("Our Providers");
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -21,9 +23,10 @@ export default function Team() {
           <Card className="overflow-hidden border-none shadow-xl bg-white">
             <div className="grid md:grid-cols-3">
               <div className="md:col-span-1 min-h-[300px] md:min-h-full relative bg-muted/10 flex items-center justify-center overflow-hidden">
-                <img 
+                <img
                   src={`${import.meta.env.BASE_URL}images/liana-condello-resized.jpg`}
-                  alt="Liana Joy Condello" 
+                  alt="Liana Joy Condello, MA, LISAC, CTP — Founder and Primary Clinician"
+                  loading="lazy"
                   className="w-full h-auto object-contain"
                 />
               </div>

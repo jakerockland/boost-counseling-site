@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { Check, Clock, Calendar, Shield, Brain, Heart } from "lucide-react";
 import { Link } from "wouter";
 
 export default function EatingDisorderIOP() {
+  useDocumentTitle("Eating Disorder IOP");
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero */}

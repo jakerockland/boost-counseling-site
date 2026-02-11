@@ -3,10 +3,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { MapView } from "@/components/Map";
 
 export default function Contact() {
+  useDocumentTitle("Contact Us");
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -138,19 +139,14 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="h-[400px] w-full relative">
-        <MapView 
-          className="w-full h-full"
-          onMapReady={(map: google.maps.Map) => {
-            const position = { lat: 32.253, lng: -110.944 }; // Approx coords for 2500 N Tucson Blvd
-            map.setCenter(position);
-            map.setZoom(15);
-            new google.maps.Marker({
-              position: position,
-              map: map,
-              title: "Boost Counseling Services"
-            });
-          }}
+      <section className="h-[400px] w-full">
+        <iframe
+          title="Boost Counseling Services location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.2!2d-110.944!3d32.253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDE1JzEwLjgiTiAxMTDCsDU2JzM4LjQiVw!5e0!3m2!1sen!2sus!4v1700000000000"
+          className="w-full h-full border-0"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         />
       </section>
     </div>

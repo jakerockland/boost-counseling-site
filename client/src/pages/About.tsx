@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { Link } from "wouter";
 
 export default function About() {
+  useDocumentTitle("About Us");
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -19,9 +21,10 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <img 
+              <img
                 src={`${import.meta.env.BASE_URL}images/growth-nature.jpg`}
-                alt="Growth and healing" 
+                alt="Nature scene representing growth and healing"
+                loading="lazy"
                 className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
               />
             </div>

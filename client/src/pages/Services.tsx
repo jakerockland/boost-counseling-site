@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { CheckCircle, Users, User, Heart, Activity, FileText, Video } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Services() {
+  useDocumentTitle("Counseling Services");
   const services = [
     {
       title: "Individual Counseling",
