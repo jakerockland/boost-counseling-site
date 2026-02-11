@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, Router as WouterRouter } from "wouter";
+import { useEffect } from "react";
+import { Route, Switch, Router as WouterRouter, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Layout from "./components/Layout";
@@ -12,9 +13,18 @@ import EatingDisorderIOP from "./pages/EatingDisorderIOP";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location]);
+  return null;
+}
+
 function Router() {
   return (
     <Layout>
+      <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
