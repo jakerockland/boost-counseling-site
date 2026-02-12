@@ -17,7 +17,7 @@ export default function About() {
       </section>
 
       {/* Mission & Beliefs */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
@@ -47,7 +47,7 @@ export default function About() {
       </section>
 
       {/* Who We Serve */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-12 md:py-20 bg-primary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="font-serif text-3xl font-bold text-foreground mb-6">Who We Serve</h2>
@@ -80,11 +80,11 @@ export default function About() {
       </section>
 
       {/* Organization Info */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="bg-muted/30 rounded-3xl p-8 md:p-12">
+          <div className="bg-muted/30 rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12">
             <h2 className="font-serif text-3xl font-bold text-foreground mb-8 text-center">Our Organization</h2>
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               <div>
                 <h3 className="font-bold text-xl mb-2">Comprehensive Care</h3>
                 <p className="text-muted-foreground mb-6">
@@ -110,9 +110,9 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-center">
+      <section className="py-12 md:py-20 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="font-serif text-3xl font-bold text-foreground mb-6">Meet Our Team</h2>
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-6">Meet Our Team</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Get to know the dedicated professionals who are here to support your journey.
           </p>

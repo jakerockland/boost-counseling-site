@@ -80,8 +80,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col gap-4 mt-8" aria-label="Mobile navigation">
+            <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+              <nav className="flex flex-col gap-4 mt-8 px-5" aria-label="Mobile navigation">
                 {navItems.map((item) => (
                   <Link key={item.path} href={item.path}>
                     <span
@@ -102,6 +102,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <Mail className="h-4 w-4" aria-hidden="true" /> contact@boosttalkaz.com
                   </a>
                 </div>
+                <Link href="/contact" className="mt-2">
+                  <Button
+                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-full"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Get Started
+                  </Button>
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
@@ -131,7 +139,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <div className="md:col-span-2">
               <h3 className="font-serif font-semibold text-foreground mb-4">Quick Links</h3>
-              <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted-foreground">
+              <ul className="grid grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-2 text-sm text-muted-foreground">
                 {navItems.map((item) => (
                   <li key={item.path}>
                     <Link href={item.path}>

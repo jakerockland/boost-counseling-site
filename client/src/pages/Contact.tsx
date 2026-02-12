@@ -21,14 +21,14 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="font-serif text-3xl font-bold text-primary mb-6">Get in Touch</h2>
-                <p className="text-muted-foreground text-lg mb-8">
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-primary mb-4 sm:mb-6">Get in Touch</h2>
+                <p className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8">
                   Whether you have questions about our services, insurance, or want to schedule an appointment, we are ready to assist you.
                 </p>
               </div>
@@ -139,7 +139,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="h-[400px] w-full">
+      <section className="h-[250px] sm:h-[400px] w-full">
         <iframe
           title="Boost Counseling Services location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.2!2d-110.944!3d32.253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDE1JzEwLjgiTiAxMTDCsDU2JzM4LjQiVw!5e0!3m2!1sen!2sus!4v1700000000000"

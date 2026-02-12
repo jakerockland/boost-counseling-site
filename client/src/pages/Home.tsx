@@ -51,9 +51,9 @@ export default function Home() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section className="py-12 md:py-20 bg-background relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/30 rounded-full blur-2xl"></div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/30 rounded-full blur-2xl"></div>
@@ -61,7 +61,7 @@ export default function Home() {
                 src={`${import.meta.env.BASE_URL}images/growth-nature.jpg`}
                 alt="Desert wildflowers representing growth and renewal through counseling"
                 loading="lazy"
-                className="relative rounded-[2rem] shadow-xl w-full object-cover aspect-[4/3] organic-shape"
+                className="relative rounded-2xl md:rounded-[2rem] shadow-xl w-full object-cover aspect-[4/3]"
               />
             </div>
             <div>
@@ -85,16 +85,16 @@ export default function Home() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4">How We Can Help</h2>
             <p className="text-muted-foreground text-lg">
               Trauma informed approaches utilized to provide interactive and exploratory sessions to identify strengths and facilitate growth.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 group bg-white/50 backdrop-blur-sm">
               <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
@@ -145,12 +145,12 @@ export default function Home() {
       </section>
 
       {/* Featured Program Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-12 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 z-0"></div>
         <div className="absolute right-0 top-0 w-1/2 h-full bg-cover bg-center opacity-10 hidden lg:block" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/abstract-flow.jpg')` }}></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
             <div className="lg:w-1/2">
               <span className="inline-block py-1 px-3 rounded-full bg-secondary/30 text-primary text-sm font-semibold mb-4">New Program</span>
               <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-6">
@@ -197,11 +197,11 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-primary text-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/abstract-flow.jpg')`, backgroundSize: 'cover' }}></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold mb-6">Ready to make a positive change?</h2>
-          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 mb-8 md:mb-10 max-w-2xl mx-auto">
             We are here to help you unpack it all while navigating next steps. Reach out today to begin your journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

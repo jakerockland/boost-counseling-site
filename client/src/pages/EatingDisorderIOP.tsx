@@ -18,7 +18,7 @@ export default function EatingDisorderIOP() {
             <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-primary mb-6">
               Eating Disorder & Trauma IOP
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-xl text-muted-foreground mb-8 leading-relaxed">
               A structured, clinically intensive behavioral health service designed to treat individuals whose eating disorder symptoms are compounded by trauma-related conditions.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -38,9 +38,9 @@ export default function EatingDisorderIOP() {
       </section>
 
       {/* Overview */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h2 className="font-serif text-3xl font-bold text-foreground mb-6">Program Overview</h2>
               <p className="text-lg text-muted-foreground mb-6">
@@ -94,10 +94,10 @@ export default function EatingDisorderIOP() {
       </section>
 
       {/* Clinical Approach */}
-      <section className="py-20 bg-background" id="program-details">
+      <section className="py-12 md:py-20 bg-background" id="program-details">
         <div className="container mx-auto px-4">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">Clinical Philosophy</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12">Clinical Philosophy</h2>
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             <Card className="border-none shadow-lg bg-white/50">
               <CardContent className="p-5 sm:p-8">
                 <h3 className="font-bold text-xl mb-4 text-primary">CBT-E</h3>
@@ -127,13 +127,13 @@ export default function EatingDisorderIOP() {
       </section>
 
       {/* Curriculum */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="font-serif text-3xl font-bold text-center mb-12">12-Week Thematic Curriculum</h2>
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-center mb-12">12-Week Thematic Curriculum</h2>
           
           <Accordion type="single" collapsible className="w-full bg-background rounded-xl shadow-sm px-4 sm:px-6">
             <AccordionItem value="phase-1">
-              <AccordionTrigger className="text-lg font-bold text-primary">Phase 1: Foundations of Recovery (Weeks 1-4)</AccordionTrigger>
+              <AccordionTrigger className="text-base sm:text-lg font-bold text-primary">Phase 1: Foundations of Recovery (Weeks 1-4)</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 <ul className="space-y-2 py-4">
                   <li>• Orientation & Building Safety</li>
@@ -145,7 +145,7 @@ export default function EatingDisorderIOP() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="phase-2">
-              <AccordionTrigger className="text-lg font-bold text-primary">Phase 2: Deepening Insight & Skills (Weeks 5-8)</AccordionTrigger>
+              <AccordionTrigger className="text-base sm:text-lg font-bold text-primary">Phase 2: Deepening Insight & Skills (Weeks 5-8)</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 <ul className="space-y-2 py-4">
                   <li>• Body Image & Self-Esteem</li>
@@ -157,7 +157,7 @@ export default function EatingDisorderIOP() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="phase-3">
-              <AccordionTrigger className="text-lg font-bold text-primary">Phase 3: Integration & Relapse Prevention (Weeks 9-12)</AccordionTrigger>
+              <AccordionTrigger className="text-base sm:text-lg font-bold text-primary">Phase 3: Integration & Relapse Prevention (Weeks 9-12)</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
                 <ul className="space-y-2 py-4">
                   <li>• Interpersonal Relationships & Boundaries</li>
@@ -197,9 +197,9 @@ export default function EatingDisorderIOP() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-center">
+      <section className="py-12 md:py-20 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="font-serif text-3xl font-bold text-foreground mb-6">Take the First Step</h2>
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-6">Take the First Step</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Recovery is possible. Our team is here to support you every step of the way.
           </p>

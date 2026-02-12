@@ -18,7 +18,7 @@ export default function Team() {
       </section>
 
       {/* Provider Profile */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 max-w-5xl">
           <Card className="overflow-hidden border-none shadow-xl bg-white">
             <div className="grid md:grid-cols-3">
@@ -31,7 +31,7 @@ export default function Team() {
                 />
               </div>
               <div className="md:col-span-2 p-5 sm:p-8 md:p-12">
-                <h2 className="font-serif text-3xl font-bold text-primary mb-2">Liana Joy Condello</h2>
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-primary mb-2">Liana Joy Condello</h2>
                 <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-6">
                   MA, LISAC, CTP | Founder & Primary Clinician
                 </p>
@@ -68,7 +68,7 @@ export default function Team() {
       </section>
 
       {/* Join Us CTA */}
-      <section className="py-20 bg-primary/5 text-center">
+      <section className="py-12 md:py-20 bg-primary/5 text-center">
         <div className="container mx-auto px-4">
           <h2 className="font-serif text-3xl font-bold text-foreground mb-6">Work With Us</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

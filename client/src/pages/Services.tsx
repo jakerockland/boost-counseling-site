@@ -63,9 +63,9 @@ export default function Services() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <Card key={index} className="group border-border/50 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col overflow-hidden relative">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -108,12 +108,12 @@ export default function Services() {
       </section>
 
       {/* Sessions & Cost */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-12 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-serif text-3xl font-bold text-foreground mb-12 text-center">Sessions & Cost</h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-8 md:mb-12 text-center">Sessions & Cost</h2>
+
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <div className="bg-background p-5 sm:p-8 rounded-xl shadow-sm">
                 <h3 className="font-bold text-xl mb-4 text-primary">Insurance Accepted</h3>
                 <p className="text-muted-foreground mb-4">
@@ -159,9 +159,9 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-center">
+      <section className="py-12 md:py-20 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="font-serif text-3xl font-bold text-foreground mb-6">Ready to get started?</h2>
+          <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-6">Ready to get started?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Contact us today to verify your insurance or discuss our sliding scale options.
           </p>
