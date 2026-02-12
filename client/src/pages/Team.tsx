@@ -33,15 +33,15 @@ export default function Team() {
               <div className="md:col-span-2 p-8 md:p-12">
                 <h2 className="font-serif text-3xl font-bold text-primary mb-2">Liana Joy Condello</h2>
                 <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-6">
-                  MA, LISAC, CTP, CAA | Founder & Primary Clinician
+                  MA, LISAC, CTP | Founder & Primary Clinician
                 </p>
                 
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Ms. Condello has worked in the field of behavioral health and substance use disorders for over 28 years. Her passion lives in helping clients navigate through their own or someone else’s substance use disorder, trauma & recovery.
+                    Ms. Condello has worked in the field of behavioral health and substance use disorders for over 30 years. Her passion lives in helping clients navigate through their own or someone else’s substance use disorder, trauma & recovery.
                   </p>
                   <p>
-                    Independently licensed in Arizona as a Substance Abuse Counselor, certified as an International Trauma Specialist, EMDRIA trained in EMDR, as well as certified with the Arizona State Board of Acupuncturists in Auricular Acupuncture.
+                    Independently licensed in Arizona as a Substance Abuse Counselor, certified as an International Trauma Specialist, and EMDRIA trained in EMDR.
                   </p>
                   <p>
                     Ms. Condello uses a person-centered approach blended with motivational interviewing to connect to her clientele. She is currently working towards a National Certification as an Addiction Counselor.
@@ -57,7 +57,7 @@ export default function Team() {
                     <span className="px-3 py-1 bg-secondary/20 text-primary rounded-full text-sm">Substance Use Disorders</span>
                     <span className="px-3 py-1 bg-secondary/20 text-primary rounded-full text-sm">Trauma & PTSD</span>
                     <span className="px-3 py-1 bg-secondary/20 text-primary rounded-full text-sm">EMDR</span>
-                    <span className="px-3 py-1 bg-secondary/20 text-primary rounded-full text-sm">Auricular Acupuncture</span>
+                    <span className="px-3 py-1 bg-secondary/20 text-primary rounded-full text-sm">Grief & Loss</span>
                     
                   </div>
                 </div>
