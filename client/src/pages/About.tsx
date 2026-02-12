@@ -3,7 +3,11 @@ import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { Link } from "wouter";
 
 export default function About() {
-  useDocumentTitle("About Us");
+  useDocumentTitle({
+    subtitle: "About Us",
+    description: "Learn about Boost Counseling Services — a licensed outpatient treatment center in Tucson, AZ dedicated to compassionate, evidence-based care for substance use, trauma, and mental health.",
+    path: "/about",
+  });
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}

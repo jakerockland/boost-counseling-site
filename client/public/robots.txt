@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boosttalkaz.com/sitemap.xml

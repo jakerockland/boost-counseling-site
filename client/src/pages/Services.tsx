@@ -1,11 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { useJsonLd } from "@/hooks/useJsonLd";
 import { CheckCircle, Users, User, Heart, Activity, FileText, Video } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Services() {
-  useDocumentTitle("Counseling Services");
+  useDocumentTitle({
+    subtitle: "Counseling Services",
+    description: "Individual, group, family, and telehealth counseling for substance use disorders, trauma, grief, and eating disorders. Insurance accepted. Sliding scale available.",
+    path: "/services",
+  });
+  useJsonLd({
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Boost Counseling Services",
+    "url": "https://boosttalkaz.com/services",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Counseling Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individual Counseling", "description": "One-on-one sessions to explore personal challenges, trauma, and growth goals in a confidential setting." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Group Counseling", "description": "Small group sessions providing peer support and shared learning experiences for specific challenges." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eating Disorder IOP", "description": "A structured 12-week intensive outpatient program for eating disorders and co-occurring trauma." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family & Couples Counseling", "description": "Helping families and partners navigate the impact of substance use and mental health challenges together." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Case Management", "description": "Comprehensive support to help clients navigate healthcare systems and access community resources." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Telehealth Services", "description": "Flexible, secure video counseling sessions available for clients throughout Arizona." } },
+      ],
+    },
+  });
   const services = [
     {
       title: "Individual Counseling",

@@ -1,10 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import { useJsonLd } from "@/hooks/useJsonLd";
 import { Link } from "wouter";
 
 export default function Team() {
-  useDocumentTitle("Our Providers");
+  useDocumentTitle({
+    subtitle: "Our Providers",
+    description: "Meet Liana Joy Condello, MA, LISAC, CTP — founder of Boost Counseling Services with over 30 years of experience in substance use disorders, trauma, EMDR, and grief counseling.",
+    path: "/team",
+  });
+  useJsonLd({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Liana Joy Condello",
+    "jobTitle": "Founder & Primary Clinician",
+    "honorificSuffix": "MA, LISAC, CTP",
+    "worksFor": {
+      "@type": "MedicalBusiness",
+      "name": "Boost Counseling Services",
+      "url": "https://boosttalkaz.com/",
+    },
+    "knowsAbout": ["Substance Use Disorders", "Trauma & PTSD", "EMDR", "Grief & Loss"],
+    "url": "https://boosttalkaz.com/team",
+  });
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}

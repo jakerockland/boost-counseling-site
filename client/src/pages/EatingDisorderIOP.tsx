@@ -6,7 +6,11 @@ import { Check, Clock, Calendar, Shield, Brain, Heart } from "lucide-react";
 import { Link } from "wouter";
 
 export default function EatingDisorderIOP() {
-  useDocumentTitle("Eating Disorder IOP");
+  useDocumentTitle({
+    subtitle: "Eating Disorder IOP",
+    description: "A 12-week intensive outpatient program for eating disorders and co-occurring trauma in Tucson, AZ. Evidence-based treatment using CBT-E, DBT, and trauma-informed care.",
+    path: "/eating-disorder-iop",
+  });
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero */}

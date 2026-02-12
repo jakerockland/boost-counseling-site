@@ -4,7 +4,7 @@ import { Home } from "lucide-react";
 import { useLocation } from "wouter";
 
 export default function NotFound() {
-  useDocumentTitle("Page Not Found");
+  useDocumentTitle({ subtitle: "Page Not Found", path: "/404" });
   const [, setLocation] = useLocation();
 
   return (

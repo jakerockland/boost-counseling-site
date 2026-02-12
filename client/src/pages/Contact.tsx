@@ -7,7 +7,11 @@ import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function Contact() {
-  useDocumentTitle("Contact Us");
+  useDocumentTitle({
+    subtitle: "Contact Us",
+    description: "Contact Boost Counseling Services in Tucson, AZ. Call (520) 447-2433 or send a message to schedule an appointment. Located at 2500 N Tucson Blvd, Suite 110.",
+    path: "/contact",
+  });
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}

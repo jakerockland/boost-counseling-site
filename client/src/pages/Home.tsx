@@ -5,7 +5,10 @@ import { ArrowRight, Heart, Shield, Sun, Users } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
-  useDocumentTitle();
+  useDocumentTitle({
+    description: "Compassionate, nonjudgmental counseling services in Tucson, AZ. Individual, group, and intensive outpatient programs for substance use disorders, trauma, eating disorders, and more.",
+    path: "/",
+  });
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
