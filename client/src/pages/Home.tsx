@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[80vh] min-h-[400px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
             autoPlay
@@ -26,20 +26,20 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10 text-center text-white max-w-4xl px-4">
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-1000">
             Healing Begins with Hope
           </h1>
-          <p className="text-lg md:text-2xl mb-8 font-light text-white/90 max-w-2xl mx-auto drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+          <p className="text-base sm:text-lg md:text-2xl mb-6 md:mb-8 font-light text-white/90 max-w-2xl mx-auto drop-shadow-md animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
             Compassionate, nonjudgmental counseling services to help you navigate life's challenges and find your path to recovery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400">
             <Link href="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
                 Start Your Journey
               </Button>
             </Link>
             <Link href="/services">
-              <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/50 backdrop-blur-sm rounded-full px-8 py-6 text-lg">
+              <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/50 backdrop-blur-sm rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg">
                 Explore Services
               </Button>
             </Link>
@@ -96,7 +96,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 group bg-white/50 backdrop-blur-sm">
-              <CardContent className="p-8 flex flex-col items-center text-center h-full">
+              <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                   <Users className="h-8 w-8 text-primary" />
                 </div>
@@ -112,7 +112,7 @@ export default function Home() {
 
             <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 group bg-white/50 backdrop-blur-sm relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"></div>
-              <CardContent className="p-8 flex flex-col items-center text-center h-full">
+              <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
                 <div className="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-secondary/30 transition-colors">
                   <Sun className="h-8 w-8 text-primary" />
                 </div>
@@ -127,7 +127,7 @@ export default function Home() {
             </Card>
 
             <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 group bg-white/50 backdrop-blur-sm">
-              <CardContent className="p-8 flex flex-col items-center text-center h-full">
+              <CardContent className="p-6 md:p-8 flex flex-col items-center text-center h-full">
                 <div className="w-16 h-16 bg-accent/30 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent/40 transition-colors">
                   <Shield className="h-8 w-8 text-primary" />
                 </div>
@@ -153,7 +153,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
               <span className="inline-block py-1 px-3 rounded-full bg-secondary/30 text-primary text-sm font-semibold mb-4">New Program</span>
-              <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-6">
+              <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-foreground mb-6">
                 Eating Disorder & Trauma Intensive Outpatient Program
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
@@ -200,18 +200,18 @@ export default function Home() {
       <section className="py-24 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/abstract-flow.jpg')`, backgroundSize: 'cover' }}></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="font-serif text-3xl md:text-5xl font-bold mb-6">Ready to make a positive change?</h2>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl font-bold mb-6">Ready to make a positive change?</h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
             We are here to help you unpack it all while navigating next steps. Reach out today to begin your journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 rounded-full px-8 py-6 text-lg font-semibold">
+              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg font-semibold">
                 Contact Us Today
               </Button>
             </Link>
             <a href="tel:520-447-2433">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-8 py-6 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg">
                 Call (520) 447-2433
               </Button>
             </a>

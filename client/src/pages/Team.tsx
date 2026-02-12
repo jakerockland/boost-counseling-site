@@ -30,7 +30,7 @@ export default function Team() {
                   className="w-full h-auto object-contain"
                 />
               </div>
-              <div className="md:col-span-2 p-8 md:p-12">
+              <div className="md:col-span-2 p-5 sm:p-8 md:p-12">
                 <h2 className="font-serif text-3xl font-bold text-primary mb-2">Liana Joy Condello</h2>
                 <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-6">
                   MA, LISAC, CTP | Founder & Primary Clinician

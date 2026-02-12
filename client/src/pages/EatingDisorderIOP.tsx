@@ -11,11 +11,11 @@ export default function EatingDisorderIOP() {
     <div className="flex flex-col min-h-screen">
       {/* Hero */}
       <section className="bg-primary/5 py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 skew-x-12 transform translate-x-20"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 skew-x-12 transform translate-x-20 hidden sm:block"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block py-1 px-3 rounded-full bg-secondary/30 text-primary text-sm font-semibold mb-4">Intensive Outpatient Program</span>
-            <h1 className="font-serif text-4xl md:text-6xl font-bold text-primary mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-primary mb-6">
               Eating Disorder & Trauma IOP
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -49,7 +49,7 @@ export default function EatingDisorderIOP() {
               <p className="text-lg text-muted-foreground mb-6">
                 Our program delivers active, clinician-directed treatment focused on symptom stabilization, functional improvement, and relapse prevention in a trauma-informed, recovery-oriented environment.
               </p>
-              <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary"><Clock className="w-5 h-5" /></div>
                   <span className="font-medium">15 Hours Weekly</span>
@@ -68,7 +68,7 @@ export default function EatingDisorderIOP() {
                 </div>
               </div>
             </div>
-            <div className="bg-muted/30 p-8 rounded-2xl">
+            <div className="bg-muted/30 p-5 sm:p-8 rounded-2xl">
               <h3 className="font-serif text-2xl font-bold mb-6">Target Population</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -99,7 +99,7 @@ export default function EatingDisorderIOP() {
           <h2 className="font-serif text-3xl font-bold text-center mb-12">Clinical Philosophy</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-none shadow-lg bg-white/50">
-              <CardContent className="p-8">
+              <CardContent className="p-5 sm:p-8">
                 <h3 className="font-bold text-xl mb-4 text-primary">CBT-E</h3>
                 <p className="text-muted-foreground">
                   Enhanced Cognitive Behavioral Therapy targets the specific mechanisms maintaining an individual’s eating disorder, focusing on thoughts, feelings, and behaviors.
@@ -107,7 +107,7 @@ export default function EatingDisorderIOP() {
               </CardContent>
             </Card>
             <Card className="border-none shadow-lg bg-white/50">
-              <CardContent className="p-8">
+              <CardContent className="p-5 sm:p-8">
                 <h3 className="font-bold text-xl mb-4 text-primary">DBT Skills</h3>
                 <p className="text-muted-foreground">
                   Dialectical Behavior Therapy enhances emotion regulation, distress tolerance, interpersonal effectiveness, and mindfulness to manage dysregulation.
@@ -115,7 +115,7 @@ export default function EatingDisorderIOP() {
               </CardContent>
             </Card>
             <Card className="border-none shadow-lg bg-white/50">
-              <CardContent className="p-8">
+              <CardContent className="p-5 sm:p-8">
                 <h3 className="font-bold text-xl mb-4 text-primary">Trauma-Informed</h3>
                 <p className="text-muted-foreground">
                   Emphasizing safety, choice, collaboration, trustworthiness, and empowerment. Somatic and mindfulness-based interventions address physiological effects.
@@ -131,7 +131,7 @@ export default function EatingDisorderIOP() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="font-serif text-3xl font-bold text-center mb-12">12-Week Thematic Curriculum</h2>
           
-          <Accordion type="single" collapsible className="w-full bg-background rounded-xl shadow-sm px-6">
+          <Accordion type="single" collapsible className="w-full bg-background rounded-xl shadow-sm px-4 sm:px-6">
             <AccordionItem value="phase-1">
               <AccordionTrigger className="text-lg font-bold text-primary">Phase 1: Foundations of Recovery (Weeks 1-4)</AccordionTrigger>
               <AccordionContent className="text-muted-foreground">
@@ -170,7 +170,7 @@ export default function EatingDisorderIOP() {
             </AccordionItem>
           </Accordion>
 
-          <div className="mt-12 bg-primary/5 p-8 rounded-xl">
+          <div className="mt-12 bg-primary/5 p-5 sm:p-8 rounded-xl">
             <h3 className="font-bold text-xl mb-4">Weekly Schedule</h3>
             <p className="text-muted-foreground mb-4">The program operates 5 days a week (Mon-Fri) from 9:00 AM to 12:00 PM.</p>
             <p className="text-sm text-primary font-semibold mb-4 italic">*Tentative schedule dependent on current census.</p>

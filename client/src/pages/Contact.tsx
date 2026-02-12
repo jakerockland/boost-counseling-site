@@ -90,13 +90,13 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-xl border border-border/50">
+            <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-xl border border-border/50">
               <h3 className="font-serif text-2xl font-bold mb-6">Send a Message</h3>
-              <form className="space-y-6" action="https://formsubmit.co/contact@boosttalkaz.com" method="POST">
+              <form className="space-y-6" action="https://formsubmit.co/ab07708b91d4065165e1bf67e4947e9c" method="POST">
                 <input type="hidden" name="_subject" value="New inquiry from Boost Counseling website" />
                 <input type="hidden" name="_next" value={`${window.location.origin}${import.meta.env.BASE_URL}contact`} />
                 <input type="hidden" name="_captcha" value="true" />
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Label htmlFor="first-name">First name</Label>
                     <Input id="first-name" name="first-name" placeholder="Jane" required />

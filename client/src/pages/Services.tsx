@@ -114,12 +114,12 @@ export default function Services() {
             <h2 className="font-serif text-3xl font-bold text-foreground mb-12 text-center">Sessions & Cost</h2>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-background p-8 rounded-xl shadow-sm">
+              <div className="bg-background p-5 sm:p-8 rounded-xl shadow-sm">
                 <h3 className="font-bold text-xl mb-4 text-primary">Insurance Accepted</h3>
                 <p className="text-muted-foreground mb-4">
                   Commercial insurance is accepted by Boost Counseling Services. We are in-network with the following providers:
                 </p>
-                <ul className="grid grid-cols-2 gap-2 text-sm text-muted-foreground">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground">
                   <li>• Aetna GEHA</li>
                   <li>• Aetna Meritain</li>
                   <li>• Blue Cross Blue Shield</li>
@@ -137,7 +137,7 @@ export default function Services() {
                 </ul>
               </div>
 
-              <div className="bg-background p-8 rounded-xl shadow-sm">
+              <div className="bg-background p-5 sm:p-8 rounded-xl shadow-sm">
                 <h3 className="font-bold text-xl mb-4 text-primary">Self-Pay Rates</h3>
                 <div className="space-y-4">
                   <div>

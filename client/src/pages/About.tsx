@@ -19,7 +19,7 @@ export default function About() {
       {/* Mission & Beliefs */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
               <img
                 src={`${import.meta.env.BASE_URL}images/growth-nature.jpg`}
@@ -56,20 +56,20 @@ export default function About() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="bg-background p-8 rounded-xl shadow-sm border border-border/50">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 text-center">
+            <div className="bg-background p-6 md:p-8 rounded-xl shadow-sm border border-border/50">
               <h3 className="font-serif text-xl font-bold text-primary mb-4">Substance Use</h3>
               <p className="text-muted-foreground">
                 Support for individuals navigating their own substance use or the impact of a loved one's use.
               </p>
             </div>
-            <div className="bg-background p-8 rounded-xl shadow-sm border border-border/50">
+            <div className="bg-background p-6 md:p-8 rounded-xl shadow-sm border border-border/50">
               <h3 className="font-serif text-xl font-bold text-primary mb-4">Trauma & Grief</h3>
               <p className="text-muted-foreground">
                 Addressing underlying issues such as trauma, depression, anxiety, and grief that often accompany SUD.
               </p>
             </div>
-            <div className="bg-background p-8 rounded-xl shadow-sm border border-border/50">
+            <div className="bg-background p-6 md:p-8 rounded-xl shadow-sm border border-border/50">
               <h3 className="font-serif text-xl font-bold text-primary mb-4">Self-Esteem</h3>
               <p className="text-muted-foreground">
                 Helping clients unpack uncomfortable feelings and build the courage to change and grow.
