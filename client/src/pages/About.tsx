@@ -28,6 +28,8 @@ export default function About() {
               <img
                 src={`${import.meta.env.BASE_URL}images/growth-nature.jpg`}
                 alt="Nature scene representing growth and healing"
+                width={1600}
+                height={893}
                 loading="lazy"
                 className="rounded-2xl shadow-xl w-full object-cover aspect-[4/3]"
               />
@@ -120,11 +122,9 @@ export default function About() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Get to know the dedicated professionals who are here to support your journey.
           </p>
-          <Link href="/team">
-            <Button size="lg" className="bg-primary text-white rounded-full px-8">
-              View Our Providers
-            </Button>
-          </Link>
+          <Button asChild size="lg" className="bg-primary text-white rounded-full px-8">
+            <Link href="/team">View Our Providers</Link>
+          </Button>
         </div>
       </section>
     </div>

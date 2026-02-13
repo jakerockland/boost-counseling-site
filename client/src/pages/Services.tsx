@@ -111,17 +111,13 @@ export default function Services() {
                     ))}
                   </ul>
                   {service.link ? (
-                    <Link href={service.link}>
-                      <Button variant="outline" className="w-full mt-auto border-primary/20 text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 group-hover:shadow-md">
-                        Learn More
-                      </Button>
-                    </Link>
+                    <Button asChild variant="outline" className="w-full mt-auto border-primary/20 text-primary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 group-hover:shadow-md">
+                      <Link href={service.link}>Learn More</Link>
+                    </Button>
                   ) : (
-                    <Link href="/contact">
-                      <Button variant="outline" className="w-full mt-auto border-border hover:border-primary/50 hover:bg-primary/5 hover:text-primary transition-all duration-300">
-                        Schedule Consultation
-                      </Button>
-                    </Link>
+                    <Button asChild variant="outline" className="w-full mt-auto border-border hover:border-primary/50 hover:bg-primary/5 hover:text-primary transition-all duration-300">
+                      <Link href="/contact">Schedule Consultation</Link>
+                    </Button>
                   )}
                 </CardContent>
               </Card>
@@ -188,11 +184,9 @@ export default function Services() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Contact us today to verify your insurance or discuss our sliding scale options.
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-primary text-white rounded-full px-8">
-              Contact Us
-            </Button>
-          </Link>
+          <Button asChild size="lg" className="bg-primary text-white rounded-full px-8">
+            <Link href="/contact">Contact Us</Link>
+          </Button>
         </div>
       </section>
     </div>

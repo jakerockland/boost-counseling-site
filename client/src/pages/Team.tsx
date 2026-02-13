@@ -45,6 +45,8 @@ export default function Team() {
                 <img
                   src={`${import.meta.env.BASE_URL}images/liana-condello-resized.jpg`}
                   alt="Liana Joy Condello, MA, LISAC, CTP — Founder and Primary Clinician"
+                  width={600}
+                  height={750}
                   loading="lazy"
                   className="w-full h-auto object-contain"
                 />
@@ -93,11 +95,9 @@ export default function Team() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             We are always looking for dedicated professionals to join our team. If you are passionate about making a difference, we'd love to hear from you.
           </p>
-          <Link href="/contact">
-            <Button variant="outline" size="lg" className="rounded-full px-8">
-              Contact Us
-            </Button>
-          </Link>
+          <Button asChild variant="outline" size="lg" className="rounded-full px-8">
+            <Link href="/contact">Contact Us</Link>
+          </Button>
         </div>
       </section>
     </div>

@@ -36,16 +36,12 @@ export default function Home() {
             Compassionate, nonjudgmental counseling services to help you navigate life's challenges and find your path to recovery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400">
-            <Link href="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
-                Start Your Journey
-              </Button>
-            </Link>
-            <Link href="/services">
-              <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/50 backdrop-blur-sm rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg">
-                Explore Services
-              </Button>
-            </Link>
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+              <Link href="/contact">Start Your Journey</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 text-white border-white/50 backdrop-blur-sm rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg">
+              <Link href="/services">Explore Services</Link>
+            </Button>
           </div>
         </div>
         
@@ -63,6 +59,8 @@ export default function Home() {
               <img
                 src={`${import.meta.env.BASE_URL}images/growth-nature.jpg`}
                 alt="Desert wildflowers representing growth and renewal through counseling"
+                width={1600}
+                height={893}
                 loading="lazy"
                 className="relative rounded-2xl md:rounded-[2rem] shadow-xl w-full object-cover aspect-[4/3]"
               />
@@ -77,11 +75,11 @@ export default function Home() {
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Unpacking uncomfortable feelings and responses around this first takes the courage to want to change. We are here for you to help unpack it all while navigating next steps.
               </p>
-              <Link href="/about">
-                <Button variant="link" className="text-primary p-0 h-auto font-semibold text-lg group">
+              <Button asChild variant="link" className="text-primary p-0 h-auto font-semibold text-lg group">
+                <Link href="/about">
                   Learn more about our philosophy <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -176,17 +174,17 @@ export default function Home() {
                   <span className="text-foreground">Multidisciplinary team support</span>
                 </li>
               </ul>
-              <Link href="/eating-disorder-iop">
-                <Button size="lg" className="bg-primary text-white rounded-full px-8">
-                  Learn More About IOP
-                </Button>
-              </Link>
+              <Button asChild size="lg" className="bg-primary text-white rounded-full px-8">
+                <Link href="/eating-disorder-iop">Learn More About IOP</Link>
+              </Button>
             </div>
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
                   src={`${import.meta.env.BASE_URL}images/counseling-session.jpg`}
                   alt="A comfortable, welcoming counseling environment"
+                  width={1600}
+                  height={893}
                   loading="lazy"
                   className="w-full h-auto object-cover"
                 />
@@ -208,16 +206,12 @@ export default function Home() {
             We are here to help you unpack it all while navigating next steps. Reach out today to begin your journey.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg font-semibold">
-                Contact Us Today
-              </Button>
-            </Link>
-            <a href="tel:520-447-2433">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg">
-                Call (520) 447-2433
-              </Button>
-            </a>
+            <Button asChild size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg font-semibold">
+              <Link href="/contact">Contact Us Today</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full px-6 py-4 md:px-8 md:py-6 text-base md:text-lg">
+              <a href="tel:520-447-2433">Call (520) 447-2433</a>
+            </Button>
           </div>
         </div>
       </section>

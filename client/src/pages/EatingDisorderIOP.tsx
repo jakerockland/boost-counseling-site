@@ -26,16 +26,12 @@ export default function EatingDisorderIOP() {
               A structured, clinically intensive behavioral health service designed to treat individuals whose eating disorder symptoms are compounded by trauma-related conditions.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-primary text-white rounded-full px-8">
-                  Request Assessment
-                </Button>
-              </Link>
-              <a href="#program-details">
-                <Button size="lg" variant="outline" className="rounded-full px-8">
-                  Program Details
-                </Button>
-              </a>
+              <Button asChild size="lg" className="bg-primary text-white rounded-full px-8">
+                <Link href="/contact">Request Assessment</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-full px-8">
+                <a href="#program-details">Program Details</a>
+              </Button>
             </div>
           </div>
         </div>
@@ -207,11 +203,9 @@ export default function EatingDisorderIOP() {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Recovery is possible. Our team is here to support you every step of the way.
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-primary text-white rounded-full px-8">
-              Contact Admissions
-            </Button>
-          </Link>
+          <Button asChild size="lg" className="bg-primary text-white rounded-full px-8">
+            <Link href="/contact">Contact Admissions</Link>
+          </Button>
         </div>
       </section>
     </div>

@@ -18,7 +18,7 @@ export default function Contact() {
       <section className="bg-primary text-white py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/abstract-flow.jpg')`, backgroundSize: 'cover' }}></div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
           <p className="text-lg text-white/90 max-w-2xl mx-auto">
             Reach out now to make positive changes in your life. We are here to help.
           </p>
@@ -120,8 +120,8 @@ export default function Contact() {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="service">Service of Interest</Label>
-                  <select id="service" name="service" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-                    <option value="General Inquiry">Select a service...</option>
+                  <select id="service" name="service" defaultValue="" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                    <option value="" disabled>Select a service...</option>
                     <option value="Individual Counseling">Individual Counseling</option>
                     <option value="Group Counseling">Group Counseling</option>
                     <option value="Eating Disorder IOP">Eating Disorder IOP</option>
@@ -146,7 +146,7 @@ export default function Contact() {
       <section className="h-[250px] sm:h-[400px] w-full">
         <iframe
           title="Boost Counseling Services location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.2!2d-110.944!3d32.253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDE1JzEwLjgiTiAxMTDCsDU2JzM4LjQiVw!5e0!3m2!1sen!2sus!4v1700000000000"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.2!2d-110.9376848!3d32.2525003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d6717b5e6a82a5%3A0x70bbbc38e040eb64!2sBoost%20Counseling%20Services%2C%20PLLC!5e0!3m2!1sen!2sus!4v1700000000000"
           className="w-full h-full border-0"
           allowFullScreen
           loading="lazy"

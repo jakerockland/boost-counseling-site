@@ -66,11 +66,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </span>
               </Link>
             ))}
-            <Link href="/contact">
-              <Button size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
-                Get Started
-              </Button>
-            </Link>
+            <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+              <Link href="/contact">Get Started</Link>
+            </Button>
           </nav>
 
           {/* Mobile Nav */}
