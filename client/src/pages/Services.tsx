@@ -143,6 +143,7 @@ export default function Services() {
                   <li>• Aetna Meritain</li>
                   <li>• Blue Cross Blue Shield</li>
                   <li>• Cigna</li>
+                  <li>• IHS (Indian Health Service)</li>
                   <li>• Medicare</li>
                   <li>• Meritain Health</li>
                   <li>• Optum</li>
