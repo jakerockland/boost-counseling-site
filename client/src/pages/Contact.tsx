@@ -1,8 +1,4 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
@@ -93,50 +89,33 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-xl border border-border/50">
-              <h3 className="font-serif text-2xl font-bold mb-6">Send a Message</h3>
-              <form className="space-y-6" action="https://formsubmit.co/ab07708b91d4065165e1bf67e4947e9c" method="POST">
-                <input type="hidden" name="_subject" value="New inquiry from Boost Counseling website" />
-                <input type="hidden" name="_next" value={`${window.location.origin}${import.meta.env.BASE_URL}contact`} />
-                <input type="hidden" name="_captcha" value="true" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="first-name">First name</Label>
-                    <Input id="first-name" name="first-name" placeholder="Jane" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="last-name">Last name</Label>
-                    <Input id="last-name" name="last-name" placeholder="Doe" required />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" placeholder="jane@example.com" type="email" required />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone</Label>
-                  <Input id="phone" name="phone" placeholder="(555) 555-5555" type="tel" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="service">Service of Interest</Label>
-                  <select id="service" name="service" defaultValue="" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
-                    <option value="" disabled>Select a service...</option>
-                    <option value="Individual Counseling">Individual Counseling</option>
-                    <option value="Group Counseling">Group Counseling</option>
-                    <option value="Eating Disorder IOP">Eating Disorder IOP</option>
-                    <option value="Trauma Therapy">Trauma Therapy</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" name="message" placeholder="How can we help you?" className="min-h-[120px]" required />
-                </div>
-                <Button type="submit" className="w-full bg-primary text-white hover:bg-primary/90">
-                  Send Message
-                </Button>
-              </form>
+            {/* Reach Out */}
+            <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-xl border border-border/50 flex flex-col justify-center">
+              <h3 className="font-serif text-2xl font-bold mb-4">Ready to Get Started?</h3>
+              <p className="text-muted-foreground text-base sm:text-lg mb-8">
+                We'd love to hear from you. Reach out directly by email or phone to ask questions, learn more about our services, or schedule an appointment.
+              </p>
+
+              <div className="space-y-4">
+                <a
+                  href="mailto:contact@boosttalkaz.com"
+                  className="flex items-center gap-3 w-full rounded-xl bg-primary text-white px-6 py-4 text-lg font-medium hover:bg-primary/90 transition-colors"
+                >
+                  <Mail className="h-5 w-5 shrink-0" />
+                  contact@boosttalkaz.com
+                </a>
+                <a
+                  href="tel:520-447-2433"
+                  className="flex items-center gap-3 w-full rounded-xl border-2 border-primary text-primary px-6 py-4 text-lg font-medium hover:bg-primary/5 transition-colors"
+                >
+                  <Phone className="h-5 w-5 shrink-0" />
+                  (520) 447-2433
+                </a>
+              </div>
+
+              <p className="text-sm text-muted-foreground mt-8">
+                Your privacy matters. All email communication is handled through a HIPAA-compliant, secure email system to protect your personal information.
+              </p>
             </div>
           </div>
         </div>
