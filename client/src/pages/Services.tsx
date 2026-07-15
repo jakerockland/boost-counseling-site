@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import { useJsonLd } from "@/hooks/useJsonLd";
-import { CheckCircle, Users, User, Heart, Activity, FileText, Video } from "lucide-react";
+import { CheckCircle, Users, User, Heart, Activity, FileText, Video, Wind } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Services() {
@@ -23,6 +23,7 @@ export default function Services() {
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Individual Counseling", "description": "One-on-one sessions to explore personal challenges, trauma, and growth goals in a confidential setting." } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Group Counseling", "description": "Small group sessions providing peer support and shared learning experiences for specific challenges." } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eating Disorder IOP", "description": "A structured 12-week intensive outpatient program for eating disorders and co-occurring trauma." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Winds of Change", "description": "Winds of Change outpatient program integrating evidence-based therapy with Native American cultural values for substance use, trauma, and grief recovery." } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Family & Couples Counseling", "description": "Helping families and partners navigate the impact of substance use and mental health challenges together." } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Case Management", "description": "Comprehensive support to help clients navigate healthcare systems and access community resources." } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Telehealth Services", "description": "Flexible, secure video counseling sessions available for clients throughout Arizona." } },
@@ -48,6 +49,13 @@ export default function Services() {
       description: "A structured 12-week intensive outpatient program for eating disorders and co-occurring trauma.",
       details: ["15 hours weekly", "CBT-E & DBT skills", "Nutritional counseling", "Trauma-informed care"],
       link: "/eating-disorder-iop"
+    },
+    {
+      title: "Winds of Change",
+      icon: <Wind className="h-6 w-6 text-primary" />,
+      description: "Winds of Change outpatient program integrating evidence-based therapy with Native American cultural values for substance use, trauma, and grief recovery.",
+      details: ["Talking Circles & Medicine Wheel", "CBT, DBT & EMDR", "Wellbriety groups", "Cultural healing practices"],
+      link: "/native-american-program"
     },
     {
       title: "Family & Couples",

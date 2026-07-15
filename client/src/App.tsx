@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import EatingDisorderIOP from "./pages/EatingDisorderIOP";
+import NativeAmericanProgram from "./pages/NativeAmericanProgram";
 import Team from "./pages/Team";
 import Contact from "./pages/Contact";
 
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
         <Route path="/eating-disorder-iop" component={EatingDisorderIOP} />
+        <Route path="/native-american-program" component={NativeAmericanProgram} />
         <Route path="/team" component={Team} />
         <Route path="/contact" component={Contact} />
         <Route path="/404" component={NotFound} />

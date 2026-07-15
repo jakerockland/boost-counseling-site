@@ -13,6 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Eating Disorder IOP", path: "/eating-disorder-iop" },
+    { name: "Winds of Change", path: "/native-american-program" },
     { name: "Our Team", path: "/team" },
     { name: "Contact", path: "/contact" },
   ];
