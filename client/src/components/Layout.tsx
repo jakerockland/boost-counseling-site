@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Eating Disorder IOP", path: "/eating-disorder-iop" },
+    { name: "Eating Disorders", path: "/eating-disorder-iop" },
     { name: "Winds of Change", path: "/winds-of-change" },
     { name: "Our Team", path: "/team" },
     { name: "Contact", path: "/contact" },
