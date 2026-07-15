@@ -55,7 +55,7 @@ export default function Services() {
       icon: <Wind className="h-6 w-6 text-primary" />,
       description: "Winds of Change outpatient program integrating evidence-based therapy with Native American cultural values for substance use, trauma, and grief recovery.",
       details: ["Talking Circles & Medicine Wheel", "CBT, DBT & EMDR", "Wellbriety groups", "Cultural healing practices"],
-      link: "/native-american-program"
+      link: "/winds-of-change"
     },
     {
       title: "Family & Couples",

@@ -32,7 +32,7 @@ function Router() {
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
         <Route path="/eating-disorder-iop" component={EatingDisorderIOP} />
-        <Route path="/native-american-program" component={NativeAmericanProgram} />
+        <Route path="/winds-of-change" component={NativeAmericanProgram} />
         <Route path="/team" component={Team} />
         <Route path="/contact" component={Contact} />
         <Route path="/404" component={NotFound} />

@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Eating Disorder IOP", path: "/eating-disorder-iop" },
-    { name: "Winds of Change", path: "/native-american-program" },
+    { name: "Winds of Change", path: "/winds-of-change" },
     { name: "Our Team", path: "/team" },
     { name: "Contact", path: "/contact" },
   ];
@@ -54,11 +54,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center gap-4" aria-label="Main navigation">
             {navItems.map((item) => (
               <Link key={item.path} href={item.path}>
                 <span
-                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer ${
+                  className={`text-sm font-medium transition-colors hover:text-primary cursor-pointer whitespace-nowrap ${
                     isActive(item.path) ? "text-primary font-bold" : "text-muted-foreground"
                   }`}
                   {...(isActive(item.path) ? { "aria-current": "page" as const } : {})}
@@ -74,7 +74,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* Mobile Nav */}
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon" aria-label="Open navigation menu">
                 <Menu className="h-6 w-6" />
               </Button>

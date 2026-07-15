@@ -10,13 +10,13 @@ export default function NativeAmericanProgram() {
   useDocumentTitle({
     subtitle: "Native American Program — Winds of Change",
     description: "Winds of Change is an outpatient behavioral health program integrating evidence-based clinical therapy with Native American cultural values. Healing from substance use disorders, trauma, and grief in Tucson, AZ.",
-    path: "/native-american-program",
+    path: "/winds-of-change",
   });
   useJsonLd({
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     "name": "Winds of Change — Boost Counseling Services",
-    "url": "https://boosttalkaz.com/native-american-program",
+    "url": "https://boosttalkaz.com/winds-of-change",
     "description": "An outpatient behavioral health program integrating evidence-based clinical therapy with Native American cultural values for substance use recovery, trauma reclamation, and grief support.",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
