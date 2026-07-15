@@ -18,9 +18,9 @@ export default function EatingDisorderIOP() {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary/10 skew-x-12 transform translate-x-20 hidden sm:block"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
-            <span className="inline-block py-1 px-3 rounded-full bg-secondary/30 text-primary text-sm font-semibold mb-4">Intensive Outpatient Program</span>
+            <span className="inline-block py-1 px-3 rounded-full bg-secondary/30 text-primary text-sm font-semibold mb-4">Intensive Outpatient Program (IOP)</span>
             <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-bold text-primary mb-6">
-              Eating Disorder & Trauma IOP
+              Eating Disorder & Trauma
             </h1>
             <p className="text-base sm:text-xl text-muted-foreground mb-8 leading-relaxed">
               A structured, clinically intensive behavioral health service designed to treat individuals whose eating disorder symptoms are compounded by trauma-related conditions.
