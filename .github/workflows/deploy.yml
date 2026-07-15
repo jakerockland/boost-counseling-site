@@ -34,7 +34,7 @@ jobs:
       # Create index.html copies at each route so GitHub Pages returns
       # 200 (not 404) — required for search engine indexing of SPA routes
       - run: |
-          for route in about services eating-disorder-iop team contact; do
+          for route in about services eating-disorder-iop winds-of-change team contact; do
             mkdir -p dist/$route
             cp dist/index.html dist/$route/index.html
           done
